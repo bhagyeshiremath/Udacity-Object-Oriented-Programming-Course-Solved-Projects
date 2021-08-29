@@ -104,10 +104,4 @@ public class Game
         System.out.println("The correct random movie is :- " + temp[1]);       
        scn.close();
     }
-}
-       
-       
-           
-        
-           
-           
+}           
