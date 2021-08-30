@@ -54,7 +54,7 @@ public class Game
        StringBuilder s = new StringBuilder(temp[0]);
        System.out.println("Try Guessing by this "+ s.toString()+"\nLength of the movie name is "+ temp[1].length());
        //Its just for testing purpose
-       System.out.println(temp[1]);
+       //System.out.println(temp[1]);
        Scanner scn = new Scanner(System.in);  
        int i = 10;
        while(i >= 0)
