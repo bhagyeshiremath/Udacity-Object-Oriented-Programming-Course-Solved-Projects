@@ -54,7 +54,7 @@ public class Game
        StringBuilder s = new StringBuilder(temp[0]);
        System.out.println("Try Guessing by this "+ s.toString()+"\nLength of the movie name is "+ temp[1].length());
        //Its just for testing purpose
-       //System.out.println(temp[1]);
+       System.out.println(temp[1]);
        Scanner scn = new Scanner(System.in);  
        int i = 10;
        while(i >= 0)
@@ -78,7 +78,18 @@ public class Game
                         if(s.toString().charAt(index) != '_')
                         {
                             int flag = repeating_char(temp[1], character , s);
-                            s.setCharAt(flag, character);
+                            //this is because if the string is containing a character ....
+                            //if user enters that characters again again ...even he guessed it right 
+                            //it is showing out of bound exception
+                            if(flag > 0)
+                            {
+                                s.setCharAt(flag, character);
+                            }
+                            else
+                            {
+                                System.out.println("You have more "+ --i +" guess(es) left");
+                                System.out.println("Guess the right char !!!!!");
+                            }
                         }
                         else
                         {
